@@ -1,0 +1,44 @@
+
+<div class="pokemon-details">
+  <div class="heading">
+  <h1>{{ pokemon.name }}</h1>
+  </div>
+    <div class="details">
+
+      <div class="image-container">
+        <img [src]="pokemon.sprites.front_shiny" alt="{{ pokemon.name }}" />
+      </div>
+
+      <div class="detail">
+        <h2>Abilities</h2>
+     
+          <li *ngFor="let ability of pokemon.abilities">{{ ability.ability.name }}</li>
+       
+      </div>
+
+     
+    
+      <div class="detail">
+        <h2>Base Experience</h2>
+        <p>{{ pokemon.base_experience}}</p>
+      </div>
+    
+      <div class="detail">
+        <h2>Height</h2>
+        <p>{{ pokemon.height }}</p>
+      </div>
+    
+      <div class="detail">
+        <h2>Moves</h2>
+        {{pokemon.name}}
+        <ul>
+          <li *ngFor="let move of pokemon.moves">{{ move.move.name}}</li>
+        </ul>
+      </div>
+    </div>
+    
+   
+  </div>
+  
+
+  
